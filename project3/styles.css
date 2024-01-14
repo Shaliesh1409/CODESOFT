@@ -1,231 +1,551 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
-*{
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
 }
-.container{
-    display: flex   ;
-}
-.sidebar{
-    background-color: grey;
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
     display: flex;
-    /* width: 20vw; */
-    height: 100vh;
-    font-family: 'Fira Sans', sans-serif; 
-    transition: transform 0.3 ease-in;
-    position: absolute; 
+    justify-content: flex-end;
+    align-items: flex-end;
 }
-.sidebar nav{
-    padding: 45px
+
+
+
+/* .logo {
+    max-width: 150px; 
+    padding: 10px;
+    overflow: hidden;
 }
-.sidebar nav li{
-    list-style: none;
-    font-size: 25px;
-    font-weight: 100;
-    padding: 33px 0;
-  
+
+.logo img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0; 
+    padding: 0; 
+
+} */
+
+.header-content {
+    text-align: right;
 }
-.sidebar nav li a{
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+.social-icons {
+    margin-top: 30px; /* Adjust the top margin as needed */
+}
+
+.social-icon {
+    font-size: 30px; /* Adjust the font size as needed */
+    margin-right: 25px; /* Adjust the right margin between icons */
+    color: #333; /* Adjust the icon color as needed */
     text-decoration: none;
+}
+
+
+
+/* ... (existing CSS code) ... */
+
+.dark-mode-toggle {
+    margin-left: 1400px; /* Push the dark mode toggle to the right side of the navbar */
+    padding: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 10px; /* Adjust the border-radius for rounded corners */
+
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode section h2,
+.dark-mode section h3 {
+    color: #fff; /* Set the text color for headings in dark mode */
+    border-bottom-color: #fff; /* Set the border color for h2 in dark mode */
+}
+.dark-mode section#contact h2 {
+    color: #fff;
+    border-bottom-color: #fff; /* Set the border color for h2 in dark mode specifically for contact section */
+}
+
+
+
+#about {
+    /* Add any styling you need for the 'about' section */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-content img{
+    margin-right: 50px;
+    height: 350px;
+    max-width: 100%;}
+
+    
+section {
+    padding: 40px;
+}
+
+section h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    font-size: 28px;
+}
+.project {
+    margin-bottom: 40px;
+}
+
+.project h3 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+.resume-button {
+    background: linear-gradient(to right, #1345e6 0%, #ed239f 51%, #1345e6 100%); /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-right: 30px;
+    border-radius: 15px;
+    height: 50px;
+    cursor: pointer;
+}
+.resume-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
     color: black;
 }
-.main{
-    /* background-color: yellow; */
-    width: 80vw;
 
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
-.infocontainer{
-    /* background-color: blue; */
-    height: 60vh;
-    width: 70vw;
-    align-items: center;
-    margin: 147px 120px;
-    display: flex;
-    justify-content: space-around;
+
+.skill {
+    margin-bottom: 10px; 
 }
-.devpic img{
-    height:60vh;
+
+/* .progress {
+    height: 20px; 
+    background-color: grey; 
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+.progress-bar {
+    height: 100%; 
+    width: 0; 
+    background-color: #4caf50; 
+    color: #fff; 
+    text-align: center;
+    line-height: 20px; 
+    transition: width 0.5s ease; 
+}
+
+.progress-bar span {
+    display: block;
+} */
+
+.skill h3 {
+    margin-bottom: 10px; /* Adjust the bottom margin of the heading */
+}
+
+
+section#contact {
+    padding: 40px 20px; /* Adjusted padding for better spacing */
+    background-color: #f4f4f4; 
     
 }
-.devinfo{
+.dark-mode section#contact {
+    background-color: #333; /* Set the background color for dark mode */
+    color: #fff; /* Set the text color for dark mode */
+}
+
+section#contact h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    font-size: 28px;
+}
+
+.contact-content {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    font-family: 'Source Code Pro', monospace;
-    margin-left: 30px;
-    font-size: 16px;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+}
+.contact-form {
+    width: 600px;
+    padding: 10px 90px;
+}
 
+.contact-form h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
-.hello{
-    font-size: 3em;
-}
-.name{
-    font-size: 3em;
-    font-weight: bold;
-    font-family: 'Fira Sans', sans-serif;  
-}
-.about{
-    font-size: 2.5em;
-}
-.aboutmore{
-    font-size: 2em;
-    font-family: 'Fira Sans', sans-serif;
-}
-.buttons{
-    margin-top: 2.2em;
+
+
+.contact-form label {
+    display: block;
+    margin: 10px 0;
     font-size: 16px;
 }
-.btn{
-    padding: 9px 14px ;
-    border-radius: 22px ;
-    color: white;
-    background-color: dodgerblue;
-    margin: 3px 3px;
-    font-weight: bold;
-    font-size: 2em;
-    cursor: pointer;
-}
-.btn:hover{
-    color: dodgerblue;
-    background-color: white;
 
-}
-.btn-sm{
-    font-size: 20px;
-    padding: 10px 19px;
-    margin: 12px 0;
-}
-.contactform {
-    font-family: 'Fira Sans', sans-serif;
-    padding: 0 35px;
-    /* padding-top: 144px; */
-    margin-left: 250px;
-    margin-top: 50px;
- 
-}
-.contactform h1{
-    font-family: 'Source Code Pro', monospace;
-    text-align: center;
-    padding: 12px 0;
-}
-.contactform form{
-    margin: 0  40px;
-}
-.contactform div{
-    padding: 10px 0;
-    display: flex;
-    flex-direction: column;
-}
-.contactform div input{
-    width: 26vw;
-    border-radius: 5px;
-    margin: 6px 0 0 0 ;
-    padding: 3px;
-}
-#emailHelp{
-    font-size: 12px;
-    color: midnightblue;
-    margin: 0 5px;
-    padding: 3px 0 0 0;
-}
-#form-check{
-flex-direction: row;
-}
-#form-check input{
-width: 20px;
-margin:3px 0;
-}
-.blogcontainer{
-    margin-left: 250px;
-    margin-top: 20px;
-}
-.blogitem {
-    margin: 20px;
-    font-family: 'Fira Sans', sans-serif;
-
-}
-h1{
-    font-family: 'Fira Sans', sans-serif;
-    margin: 23px;
-}
-p{
-    font-family: 'Source Code Pro', monospace;
-
-}
-.intro{
-    margin-left: 250px;
-    margin-top: 20px;
-}
-
-.intro h2{
-    font-family: 'Fira Sans', sans-serif;
-    margin: 12px;
-}
-.intro p{
-    font-family: 'Source Code Pro', monospace;
-    margin: 12px;
-}
-.skillcontainer{
-    padding: 12px;
-}
-.skill{
-    width: 265px;
-    height: 6px;
-    background-color: red;
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-radius: 10px;
     border: 2px solid black;
 }
-.skillitem{
-    display: flex;
-    align-items: center;
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 900;
-}
-.hundred{
-    width: 265px;
-    background-color: blueviolet;
-}
-.seventyfive{
-    width: 132px;
-    background-color: aqua;
-}
-.fifty{
-    width: 70px;
-    background-color: yellow;
-}
-.sidebarGo{
-    transform: translate(-443px, 0px);
-    position: absolute;
-}
-.hamburger{
-    position: absolute;
+
+.contact-form input[type="submit"] {
+    background: linear-gradient(to right, #1345e6 0%, #ed239f 51%, #1345e6 100%);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: auto; /* Center the button */
+    font-size: 20px;
+    border-radius: 15px;
+    width: auto;
     cursor: pointer;
-    top: 2px;
-    left: 12px;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.contact-details {
+    width: 400px;
+    padding: 10px;
+    margin-left: 100px;
 
 }
-.cross{
-    margin-left: 180px;
+
+.contact-details h3{
+    font-size: x-large;
+}
+.contact-details p {
+    margin: 20px 0 20px 10px;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.contact-details i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+#skills-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skills-column {
+    flex: 1;
+    max-width: 45%; /* Adjust the width of each column */
+    margin-bottom: 20px;
+}
+
+.skill-bar {
+    margin-bottom: 20px;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s ease-out forwards; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.skill-name {
+    font-weight: bold;
+}
+
+.skill-level {
+    position: relative;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 5px;
     margin-top: 5px;
 }
 
-/* @media (max-width: 770px) {
-    .sidebar{
-        transform: translate(-443px,0px);
-        position: absolute;
+.skill-progress {
+    height: 100%;
+    border-radius: 5px;
+    background-color: #3498db;
+    width: 70%; /* Adjust this value to represent skill level */
+    animation: progressBarAnimation 1s ease-out forwards; /* Progress bar animation */
+}
+
+@keyframes progressBarAnimation {
+    from {
+        width: 0;
     }
-} */
-@media (max-width: 1000px) {
-    .buttons{
-        font-size: 6px;
+}
+
+@media only screen and (max-width: 600px) {
+    #skills-container {
+        width: 90%;
     }
-    .devpic{
-        display: none;   
+}
+
+#projects {
+    padding: 40px;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    font-size: 28px;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.project-info p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+.project-link {
+    display: block;
+    margin-top: 15px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+.dark-mode section#projects h3{
+    color: #333;
+}
+
+#internship {
+    padding: 40px;
+}
+
+.experience-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.company-logo img {
+    width: 80px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 50%;
+}
+
+.experience-details {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.experience-details h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.role, .duration, .location {
+    margin: 5px 0;
+    color: #555;
+}
+
+.description {
+    flex: 2;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-    .devinfo{
-        font-size: 10px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
-    .intro, .blogcontainer, .contactform{
-        margin: 50px 8px;
-    }
-} 
+}
+
+.experience-card {
+    animation: fadeInUp 1s ease-out;
+}
+.experience-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.experience-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.dark-mode section#internship  {
+    color: #333;
+    border-bottom-color: #fff; /* Set the border color for h2 in dark mode specifically for contact section */
+}
+.dark-mode section#internship h3 {
+    color: #333;
+    border-bottom-color: #fff; /* Set the border color for h2 in dark mode specifically for contact section */
+}
+
+
+

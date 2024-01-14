@@ -4,55 +4,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mishra shailesh - web developer</title>
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="sidebar sidebarGo">
-            <!-- Shailesh -->
-            <nav>
-                <ul>
-                    <li><a href="home.html"> Home</a></li>
-                    <li><a href="Intro.html">Intro</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact Me</a></li>
-                </ul>
-            </nav>
+    <header>
+        <!-- <div class="logo"><img src="logo.png" alt="Your Logo">
+        </div> -->
+        <div class="header-content">
+            <h1>Mishra Shailesh</h1>
+            <p>Web Developer</p>
         </div>
-        <div class="main">
-            <div class="hamburger">
-                <img class="ham" src="ham.png" width="50" height="50px"></img>
-                <img class="cross" src="cross.png" width="25" height="25px"></img>
-            </div>
-            <div class="infocontainer">
-                <div class="devpic">
-                    <img src="shaileshintro.png" alt="Shailesh Mishra">
-                </div>
-                <div class="devinfo">
-                    <div class="hello">Hi I am</div>
-                    <div class="name">Shailesh Mishra</div>
-                    <div class="aboutmore">Passionate tech enthusiast with a strong foundation in HTML, CSS, PHP, and Python
-                        & Java. Also, equipped with hands-on experience in Salesforce development, including VF pages,
-                        LWC components, Aura components, triggers, and test classes. Committed to tackling real-world
-                        challenges as part of a dynamic team.</div>
-                    <div class="aboutmore">web developer</div>
 
-                    <div class="buttons">
-                        <a href="My new resume.docx" download>
-                        <button class="btn"> Download CV</button></a>
-                        <a href="contact.html">
-                        <button class="btn"> Contact Me</button></a>
-                    </div>
-                </div>
-             
-            </div>
+
+    </header>
+
+    <div class="navbar">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+
+        <!-- Inside your dark-mode-toggle div -->
+        <div class="dark-mode-toggle">
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle-btn">
+                <span class="slider half-moon"></span>
+            </label>
         </div>
+
+        <!-- <div class="dark-mode-toggle">
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle-btn">
+                <span class="slider round"></span>
+            </label>
+        </div> -->
     </div>
 
+    <section id="about">
+        <div class="about-content">
+            <img src="shaileshintro.png" alt="Your Name">
+            <div class="intro-text">
+                <h1> Hi I am Shailesh Mishra </h1>
+                <p>
+                    Passionate tech enthusiast with a strong foundation in HTML, CSS, PHP, and Python & Java. Also,
+                    equipped
+                    with hands-on experience in Salesforce development, including VF pages, LWC components, Aura
+                    components,
+                    triggers, and test classes. Committed to tackling real-world challenges as part of a dynamic team.
+                    web developer
+
+                </p>
+
+                <div class="social-icons">
+                    <!-- Add the social media icons with links -->
+                    <a href="https://github.com/yourgithub" target="_blank" class="social-icon"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/yourlinkedin" target="_blank" class="social-icon"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/yourinstagram" target="_blank" class="social-icon"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/yourtwitter" target="_blank" class="social-icon"><i
+                            class="fab fa-twitter"></i></a>
+                </div>
+                <button onclick="window.open('My_new_resume.docx')" class="resume-button">Download Resume</button>
+                <button onclick="window.location.href='#contact'" class="resume-button"><a href="contact"></a> Hire
+                    Me</button>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-container">
+            <div class="skills-column">
+
+                <div class="skill-bar">
+                    <div class="skill-name">HTML</div>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">CSS</div>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">Bootstrap</div>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-column">
+
+                <div class="skill-bar">
+                    <div class="skill-name">Core Java</div>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">Core Python</div>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">Salesforce Admin</div>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">Salesforce Development</div>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 65%;"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card" onclick="window.location.href='project1.html'">
+            <div class="project-info">
+                <h3>Online Blood Bank</h3>
+                <p>As a "Diploma final year project" , I developed an "Online Blood Bank" web application that provides
+                    blood to people in need of blood by providing them with detailed infoirmation about blood groups
+                    that are available and about donors who have the same blood group.</p>
+                <a href="project1.html" class="project-link">View Project</a>
+            </div>
+        </div>
+        <div class="project-card" onclick="window.location.href='project2.html'">
+            <div class="project-info">
+                <h3>Shivaniya Interiors</h3>
+                <p>Shivanya Interiors' landing page is a sophisticated and inviting online showcase for a premium
+                    interior design business. The website offers a glimpse into the world of elegant and bespoke
+                    interior solutions crafted by Shivanya Interiors.</p>
+                <a href="https://shaliesh1409.github.io/shivanyainteriors/" class="project-link">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="internship">
+        <h2>Internship Experience</h2>
+    
+        <div class="experience-card">
+            <div class="experience-details">
+                <h3>Salesforce Development Trainee – Mv Clouds, Ahmedabad</h3>
+                <p class="role">August 2020 – November 2020</p>
+                <ul>
+                    <li>Salesforce Admin & Customization: Received hands-on training in Salesforce administration, focusing on user management, data security, and workflow automation.</li>
+                    <li>Front-end Development: Gained proficiency in creating Visualforce pages, Aura, LWC to enhance user interfaces and facilitate efficient data entry.</li>
+                    <li>Back-end Development: Explored back-end development by learning to create Apex triggers and developing corresponding test classes for business logic.</li>
+                    <li>Deployment: Contributed to customization deployments, gaining insights into deployment processes.</li>
+                    <li>Collaboration: Worked in cross-functional teams to understand project workflows.</li>
+                </ul>
+            </div>
+        </div>
+    
+    
+    </section>
+    
+    
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-content">
+            <div id="contact-form" class="contact-form">
+                <form action="submit_contact_form.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+            <div class="contact-details">
+                <h3>Contact Details</h3>
+                <p><i class="fas fa-envelope"></i> Email: your@email.com</p>
+                <p><i class="fas fa-phone"></i> Phone: +123 456 789</p>
+                <p><i class="fas fa-map-marker-alt"></i>123 Street, Cityville</p>
+                <!-- You can use other icons like fa-map-marker for address -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
